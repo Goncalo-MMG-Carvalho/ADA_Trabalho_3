@@ -18,21 +18,18 @@ public class Main {
 		nLocations = Integer.parseInt(tokens[2]);
 		nRoads = Integer.parseInt(tokens[3]);
 		
-		//TODO criar objecto de resolução
 		Solver sol = new Solver(nLocations, nRoads);
 		
 		for (int i = 0; i < nRoads; i++) {
 			tokens = in.readLine().split(" ");
 			
-			//TODO mandar para a class de resolução
-			
 			sol.addRoad(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
 		}
 		
-		//TODO resolver
-		System.out.println(Math.min(nThieves, sol.solve()) * nBarsPerBag);
+		tokens = in.readLine().split(" ");
+		sol.setFirstAndLast(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
 		
-		
+		System.out.println(Integer.min(nThieves, sol.solve()) * nBarsPerBag);
 	}
 
 }
