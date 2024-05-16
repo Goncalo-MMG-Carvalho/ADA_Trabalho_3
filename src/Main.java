@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		
+		//System.out.println(System.getProperty("java.version"));
 		//first line of input
 		String[] tokens = in.readLine().split(" ");
 		
